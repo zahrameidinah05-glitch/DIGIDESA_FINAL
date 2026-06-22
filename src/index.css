@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* Gunakan CSS standar untuk background agar tidak error */
+body {
+  background-color: #f8fafc; /* Warna Slate 50 */
+  color: #0f172a; /* Warna Slate 900 */
+  font-family: sans-serif;
+}
