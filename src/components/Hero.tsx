@@ -3,6 +3,15 @@ import imgHero from '../img/foto depan balaidesa.jpeg';
 import { ChevronRight, ShieldCheck } from 'lucide-react';
 
 const Hero = () => {
+  const handleScroll = () => {
+    const element = document.getElementById('pelayanan');
+    if (element) {
+      const yOffset = -100;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative py-20 px-6 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-16">
@@ -25,7 +34,7 @@ const Hero = () => {
             Warga Banjaranyar kini bisa mengurus surat keterangan dan administrasi kependudukan cukup dari smartphone. Lebih cepat, transparan, dan efisien.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="px-10 py-4 bg-blue-900 text-white rounded-2xl font-bold hover:shadow-2xl hover:shadow-blue-900/40 transition-all flex items-center gap-2">
+            <button onClick={handleScroll} className="px-10 py-4 bg-blue-900 text-white rounded-2xl font-bold hover:shadow-2xl hover:shadow-blue-900/40 transition-all flex items-center gap-2">
               Mulai Pelayanan <ChevronRight size={20} />
             </button>
           </div>

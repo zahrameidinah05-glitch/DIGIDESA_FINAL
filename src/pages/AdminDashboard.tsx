@@ -195,54 +195,54 @@ const AdminDashboard = () => {
       // ==========================================
       doc.setTextColor(0, 0, 0);
       
-      // Logo Garuda (Tengah Atas)
-      if (garudaImg) doc.addImage(garudaImg, 'PNG', pageWidth / 2 - 12, 10, 24, 24);
+      // Logo Garuda (Kiri Atas sesuai gambar)
+      if (garudaImg) doc.addImage(garudaImg, 'PNG', 15, 10, 22, 22);
 
       // Judul KARTU KELUARGA
       doc.setFontSize(18);
       doc.setFont("helvetica", "bold");
-      doc.text("KARTU KELUARGA", pageWidth / 2, 40, { align: "center" });
+      doc.text("KARTU KELUARGA", pageWidth / 2, 20, { align: "center" });
       
       doc.setFontSize(12);
       // Asumsi ada nomor KK, pakai NIK pemohon sementara jika kosong
-      doc.text(`NO: ${item.nik || '-'}`, pageWidth / 2, 46, { align: "center" });
+      doc.text(`NO: ${item.nik || '-'}`, pageWidth / 2, 26, { align: "center" });
 
       // Header Info (Kiri)
       doc.setFontSize(9);
       doc.setFont("helvetica", "normal");
-      doc.text("Nama Kepala Keluarga", 15, 55);
-      doc.text(":", 55, 55);
-      doc.text((item.nama || '').toUpperCase(), 58, 55);
+      doc.text("Nama Kepala Keluarga", 15, 35);
+      doc.text(":", 55, 35);
+      doc.text((item.nama || '').toUpperCase(), 58, 35);
 
-      doc.text("Alamat", 15, 60);
-      doc.text(":", 55, 60);
-      doc.text((item.alamat || '').toUpperCase(), 58, 60);
+      doc.text("Alamat", 15, 40);
+      doc.text(":", 55, 40);
+      doc.text((item.alamat || '').toUpperCase(), 58, 40);
 
-      doc.text("RT / RW", 15, 65);
-      doc.text(":", 55, 65);
-      doc.text("007/001", 58, 65); // Dummy RT/RW or parse from alamat
+      doc.text("RT / RW", 15, 45);
+      doc.text(":", 55, 45);
+      doc.text("007/001", 58, 45); // Dummy RT/RW or parse from alamat
 
-      doc.text("Desa/Kelurahan", 15, 70);
-      doc.text(":", 55, 70);
-      doc.text("BANJARANYAR", 58, 70);
+      doc.text("Desa/Kelurahan", 15, 50);
+      doc.text(":", 55, 50);
+      doc.text("BANJARANYAR", 58, 50);
 
       // Header Info (Kanan)
       const rightX = pageWidth - 85;
-      doc.text("Kecamatan", rightX, 55);
-      doc.text(":", rightX + 25, 55);
-      doc.text("BALAPULANG", rightX + 28, 55);
+      doc.text("Kecamatan", rightX, 35);
+      doc.text(":", rightX + 25, 35);
+      doc.text("BALAPULANG", rightX + 28, 35);
 
-      doc.text("Kabupaten/Kota", rightX, 60);
-      doc.text(":", rightX + 25, 60);
-      doc.text("TEGAL", rightX + 28, 60);
+      doc.text("Kabupaten/Kota", rightX, 40);
+      doc.text(":", rightX + 25, 40);
+      doc.text("TEGAL", rightX + 28, 40);
 
-      doc.text("Kode Pos", rightX, 65);
-      doc.text(":", rightX + 25, 65);
-      doc.text("52464", rightX + 28, 65);
+      doc.text("Kode Pos", rightX, 45);
+      doc.text(":", rightX + 25, 45);
+      doc.text("52464", rightX + 28, 45);
 
-      doc.text("Provinsi", rightX, 70);
-      doc.text(":", rightX + 25, 70);
-      doc.text("JAWA TENGAH", rightX + 28, 70);
+      doc.text("Provinsi", rightX, 50);
+      doc.text(":", rightX + 25, 50);
+      doc.text("JAWA TENGAH", rightX + 28, 50);
 
       // Data Anggota
       let anggota = [];
@@ -296,7 +296,7 @@ const AdminDashboard = () => {
       ]);
 
       autoTable(doc, {
-        startY: 75,
+        startY: 55,
         head: table1Head,
         body: table1Body,
         theme: 'grid',
