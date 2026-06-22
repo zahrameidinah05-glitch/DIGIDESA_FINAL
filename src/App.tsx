@@ -66,7 +66,7 @@ function App() {
           
           <p className="opacity-40 text-[10px] font-semibold tracking-[0.2em] uppercase text-center leading-loose">
             © 2026 Balai Desa Balapulang <br /> 
-            Dikembangkan oleh <span className="text-blue-400">Andra Developer</span>
+            Dikembangkan oleh <span className="text-blue-400">KELOMPOK PPM</span>
           </p>
         </div>
       </footer>
